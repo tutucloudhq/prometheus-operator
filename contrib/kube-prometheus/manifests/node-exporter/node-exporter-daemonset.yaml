@@ -35,6 +35,9 @@ spec:
         - name: sys
           readOnly: true
           mountPath: /host/sys
+        - name: rootfs
+          readOnly: true
+          mountPath: /rootfs
       volumes:
       - name: proc
         hostPath:
@@ -42,4 +45,7 @@ spec:
       - name: sys
         hostPath:
           path: /sys
+      - name: rootfs
+        hostPath:
+          path: /
 
